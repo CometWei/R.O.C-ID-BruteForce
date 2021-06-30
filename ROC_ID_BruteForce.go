@@ -17,9 +17,12 @@ func main() {
 	Id = strings.ToUpper(Id)
 	id_len := len([]rune(Id))
 
+	r, _ := regexp.Compile("[^A-Za-z0-9]")
 	var id_range int = 1
 
-	if id_len < 10 {
+	if r.MatchString(Id) {
+		print("Is String Error.\n")
+	} else if id_len < 10 {
 
 		if id_len == 0 {
 
