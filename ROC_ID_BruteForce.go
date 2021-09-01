@@ -21,7 +21,7 @@ func main() {
 	var id_range int = 1
 
 	if r.MatchString(Id) {
-		print("Is String Error.\n")
+		print("It's strings error.\n")
 	} else if id_len < 10 {
 
 		if id_len == 0 {
@@ -119,7 +119,7 @@ func main() {
 	} else if id_len == 10 {
 		ID_check(Id)
 	} else if id_len > 10 {
-		print(Id, " is so long.\n")
+		print(Id, "Is so long.\n")
 	}
 
 }
@@ -179,6 +179,7 @@ func ROC_ID_check(id string) bool {
 	code[10] = id_code % 10
 
 	if ((code[2] == 1) || (code[2] == 2)) == false {
+		print("Sex is error.\n")
 		return false
 	}
 
