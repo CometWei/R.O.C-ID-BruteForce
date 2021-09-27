@@ -21,7 +21,7 @@ func main() {
 	var id_range int = 1
 
 	if r.MatchString(Id) {
-		print("It's strings error.\n")
+		fmt.Printf("It's strings error.\n")
 	} else if id_len < 10 {
 
 		if id_len == 0 {
@@ -119,7 +119,7 @@ func main() {
 	} else if id_len == 10 {
 		ID_check(Id)
 	} else if id_len > 10 {
-		print(Id, "Is so long.\n")
+		fmt.Printf("%s Is so long.\n", Id)
 	}
 
 }
@@ -149,7 +149,7 @@ func GetCityRandomString(l int) string {
 func ID_check(id string) {
 	id_check := ROC_ID_check(id)
 	if id_check == true {
-		print(id, ",", id_check, "\n")
+		fmt.Printf("%s,%v\n", id, id_check)
 	}
 }
 
@@ -179,7 +179,7 @@ func ROC_ID_check(id string) bool {
 	code[10] = id_code % 10
 
 	if ((code[2] == 1) || (code[2] == 2)) == false {
-		print("Sex is error.\n")
+		fmt.Printf("Sex is error.\n")
 		return false
 	}
 
